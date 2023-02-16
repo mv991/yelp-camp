@@ -74,6 +74,13 @@ const sessionConfig = {
 
 app.use(session(sessionConfig))
 app.use(flash());
+
+app.use((req, res, next) => {
+    res.locals.currentUser = req.user;
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
+    next();
+})
 //we always wanna make sure that app.us session is before our passport session
 // app.use(helmet());
 
@@ -86,12 +93,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use(mongoSanitize());
 
-app.use((req, res, next) => {
-    res.locals.currentUser = req.user;
-    res.locals.success = req.flash('success');
-    res.locals.error = req.flash('error');
-    next();
-})
+
 //we wanna make sure that the flash middleware is before our
 //routtes as our routes require this misddleware
 

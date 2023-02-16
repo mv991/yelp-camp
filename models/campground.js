@@ -7,9 +7,7 @@ const imageSchema = new Schema({
     url: String,
     filename: String
 })
-const properties = new Schema ({
-popupText:String
-})
+
 imageSchema.virtual('thumbnail').get(function () {
     return this.url.replace('/upload', '/upload/w_200');
 })

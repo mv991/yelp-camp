@@ -26,6 +26,11 @@
                         name="campground[price]" value="<%=singlecampground.price %>" required>
 
                 </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="campground[description]"
+                    required><%= singlecampground.description%></textarea>
+            </div>
                 <div class="mb-3">
                     <label class="form-label" for="image">Image</label>
                     <input class="form-control" type="file" id="price" name="image" multiple>

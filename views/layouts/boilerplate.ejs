@@ -20,14 +20,23 @@
     />
     <link rel="stylesheet" href="/stylesheets/app.css" />
     <link rel="stylesheet" href="/stylesheets/loader.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class="d-flex flex-column vh-100">
+  <body class="d-flex flex-column">
     <div class="loader-wrapper">
       <div class="loader"></div>
     </div>
     <%- include('../partials/navbar') %>
-    <main class="container mt-5">
+    <main
+      class="container-fluid"
+      style="margin-top: 3rem; position: relative; min-height: 100vh"
+    >
       <%- include('../partials/flash') %> <%- body %>
     </main>
     <%- include('../partials/footer') %>

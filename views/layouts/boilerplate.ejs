@@ -29,14 +29,9 @@
   </head>
 
   <body class="d-flex flex-column">
-    <div class="loader-wrapper">
-      <div class="loader"></div>
-    </div>
+    <div id="loader" class="center"></div>
     <%- include('../partials/navbar') %>
-    <main
-      class="container-fluid"
-      style="margin-top: 3rem; position: relative; min-height: 100vh"
-    >
+    <main class="container-fluid" style="position: relative; min-height: 100vh">
       <%- include('../partials/flash') %> <%- body %>
     </main>
     <%- include('../partials/footer') %>

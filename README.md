@@ -1,4 +1,6 @@
 **NOTE** : **This Poject is deployed on a free instance of render, which spin down after 15 minutes of activity and take a minute to spin back up.**
+
+
 **YelpCamp** is a massive Node.js application designed using a Model-View-Controller (MVC) architecture. This project includes full CRUD functionality, user authentication, and authorization for protected routes. It also incorporates image handling and input validation to enhance user experience and security.
 <br>
 ## Images
